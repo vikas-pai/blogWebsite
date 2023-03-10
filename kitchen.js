@@ -9,14 +9,17 @@ function getDetails() {
   noOfItems = prompt("Add the no of items:");
   price = prompt("Enter price per item");
   tax = taxJson[manufacture] * noOfItems * price;
-  var json = {
-    Item: itemName,
-    TypeofTax: manufacture,
-    NoofItems: noOfItems,
-    Price: price,
-    Tax: tax,
-  };
-  arr.push(json);
+  createJson();
+}
+function createJson(){
+    var json = {
+        Item: itemName,
+        TypeofTax: manufacture,
+        NoofItems: noOfItems,
+        Price: price,
+        Tax: tax,
+      };
+      arr.push(json);
 }
 function showInventory() {
   console.log(arr);
